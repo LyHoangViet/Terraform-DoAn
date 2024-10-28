@@ -8,7 +8,7 @@ locals {
   key_name = "test-terraform"
   db_username = "admin"
   db_password = "DoAn123456"
-  db_name = "DoAn-database"
+  db_name = "Doandb"
 
   ec2_instances = [
     {
