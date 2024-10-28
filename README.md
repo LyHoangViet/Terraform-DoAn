@@ -6,7 +6,11 @@ Use Terraform for configure infrastructure on AWS
 # Requirements
 
 - Terraform CLI
-- AWS CLI
+- AWS CLI (Use the following command to log in)
+
+```bash
+aws configure
+```
 
 > Note: you should use WSL or Ubuntu.
 
