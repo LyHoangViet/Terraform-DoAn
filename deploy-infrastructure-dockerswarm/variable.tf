@@ -12,6 +12,13 @@ locals {
 
   ec2_instances = [
     {
+      name               = "server_test"
+      ami                = "ami-0eb9fdcf0d07bd5ef"  # Ubuntu Server 24.04 LTS
+      instance_type      = "t3.medium"
+      subnet_id          = module.infrastructure_vpc.subnet_public2_id
+      security_group_ids = [module.security.public_sg_id]
+    },
+    {
       name               = "my_server"
       ami                = "ami-0eb9fdcf0d07bd5ef"  # Ubuntu Server 24.04 LTS
       instance_type      = "t2.micro"

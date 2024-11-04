@@ -69,6 +69,21 @@ resource "aws_vpc_security_group_ingress_rule" "public_sg_inbound_4" {
   }
 }
 
+resource "aws_vpc_security_group_ingress_rule" "public_sg_inbound_5" {
+  security_group_id = aws_security_group.public_sg.id
+  cidr_ipv4 = "0.0.0.0/0"
+  # Port
+  from_port = 3000
+  to_port = 3000
+  # Protocol
+  ip_protocol = "tcp"
+  tags = {
+    Name = "${var.network_root_name}-sg-public-inbound-rule5"
+    Type = "Security-Group-Inbound-Rule"
+    Author = var.author
+  }
+}
+
 resource "aws_vpc_security_group_egress_rule" "public_sg_outbound" {
   security_group_id = aws_security_group.public_sg.id
   cidr_ipv4 = "0.0.0.0/0"
