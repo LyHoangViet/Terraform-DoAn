@@ -4,6 +4,7 @@ resource "aws_lb_target_group" "target_group" {
   port        = 80
   protocol    = "HTTP"
   vpc_id      = var.vpc_id
+  target_type = "ip"  # Đặt target type là "ip" để phù hợp với network mode "awsvpc"
 
   health_check {
     enabled             = true
