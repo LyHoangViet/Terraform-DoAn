@@ -80,7 +80,9 @@ locals {
 Change current working directiry to `deploy-infrastructure`, you need to link modules in configuration with this command
 
 ```bash
-cd ./Terraform-DoAn/deploy-infrastructure/
+cd ./Terraform-DoAn/deploy-infrastructure-dockerswarm/
+# or
+cd ./Terraform-DoAn/deploy-infrastructure-ecs/
 ```
 
 Init **terraform**
