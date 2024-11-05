@@ -1,7 +1,7 @@
 # Terraform-DoAn
 Use Terraform for configure infrastructure on AWS
 
-# Configuration of Infrastructure with VPC, RDS, EC2
+# Configuration of Infrastructure with VPC, RDS, EC2, ...
 
 # Requirements
 
@@ -14,9 +14,23 @@ aws configure
 
 > Note: you should use WSL or Ubuntu.
 
+# Use the desired infrastructure.
+
+- If you want use infrastructure Docker Swarm, you should use command:
+
+```bash
+cd ./deploy-infrastructure-dockerswarm/
+```
+
+- If you want use infrastructure Amazon ECS, you should use command:
+
+```bash
+cd ./deploy-infrastructure-ecs/
+```
+
 # Note
 
-- If you want to change something, you should look into `deploy-infrastructure/variable.tf`. All of variables are setup in there. Pay attention to these local variables
+- If you want to change something, you should look into `./variable.tf`. All of variables are setup in there. Pay attention to these local variables
 
 ```hcl
 # Setup local variables
