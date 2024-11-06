@@ -106,3 +106,19 @@ output "cluster_id" {
 output "cluster_arn" {
   value = module.ecs.cluster_arn
 }
+
+output "backend_task_definition_id" {
+  value = module.ecs.backend_task_definition_id
+}
+
+output "backend_task_definition_arn" {
+  value = module.ecs.backend_task_definition_arn
+}
+
+output "frontend_task_definition_id" {
+  value = module.ecs.frontend_task_definition_id
+}
+
+output "frontend_task_definition_arn" {
+  value = module.ecs.frontend_task_definition_arn
+}

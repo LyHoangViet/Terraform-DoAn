@@ -74,4 +74,18 @@ module "ecs" {
   # Input
   region = local.region
   author = local.author
+
+  backend_family = local.backend_family
+  backend_image = local.backend_image
+  db_username = local.db_username
+  db_password = local.db_password
+  mysql_database = local.mysql_database
+  db_host = module.rds.db_instance_endpoint
+  db_dialect = local.db_dialect
+  be_port = local.be_port
+  jwt_secret = local.jwt_secret
+
+  frontend_family = local.frontend_family
+  frontend_image = local.frontend_image
+  be_host = local.be_host
 }
